@@ -1,0 +1,13 @@
+a {
+    text-decoration: none;
+}
+    #myStyle {
+        font-family: verdana;
+        color: navy;
+        }
+body {
+    background-color: rgb(102, 138, 169);
+    border: 10px navy solid;
+    padding : 30px;
+
+}

@@ -1,0 +1,9 @@
+/* Typography */
+#myStyle {
+                font-family: courier;
+                color: darkred;
+            }
+#myImg {
+                border: 5px solid black;
+                padding: 5px;
+            }
