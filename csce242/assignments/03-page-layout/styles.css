@@ -1,19 +1,59 @@
 /* Structure */
 #main-header {
-    background-color: blueviolet;
+    background-color: darkred;
+    color:black;
+    text-align: center;
+    padding: 10px;
 }
 
 #main-content {
-    background-color:lightgray;
-    padding:5px;
     margin: auto;
 }
 
 #main-footer {
-    background-color: blueviolet;
+    background-color: darkred;
+    font-weight:500;
+    text-align: center;
     padding: 5px;
+    height:60px;
+    border-bottom: darkred;
 }
 
+#section1 {
+    display:flex;
+    text-align: center;
+}
+
+#titlePart {
+    display:flex;
+    flex:1;
+    text-align:center;
+    padding:10px;
+    gap:10px;
+}
+
+.headerBox {
+    flex:1;
+}
+
+.title {
+    text-align: center;
+    background-color:darkred;
+    padding:10px;
+    font-weight:bold;
+}
+
+.headerImg {
+    display:block;
+    width: 200px; 
+    height: 300px;
+}
+
+img {
+    max-width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+}
 
 /* Navigation */
 #main-nav ul {
@@ -24,7 +64,7 @@
     list-style-type: none;
     padding: 5px;
     background-color: lightgray;
-    border-bottom: 1px solid black
+    border-bottom: 1px solid black;
 }
 
 #main-nav a {
@@ -33,11 +73,11 @@
 }
 
 #main-nav a:hover {
-    color: blueviolet;
+    color: lightgray;
 }
 
 #gallery section {
-    background-color: lightgrey;
+    background-color: gray;
     padding: 5px;
     border-radius: 5px;
     margin: 5px;
@@ -45,7 +85,7 @@
 }
 
 #gallery {
-    align-items: flex ends;
+    align-items: flex end;
     display:flex;
     justify-content: space-between;
 }
@@ -57,12 +97,85 @@
 /* Typography */
 body {
     font-family: Arial, sans-serif;
+    background-color:lightslategrey;
+    margin:0;
+}
+
+#text1 {
+    flex:1;
+    color:black;
+    padding:10px;
+    font-weight:bold;
+}
+
+.topic {
+    display:flex;
+    border-top: 5px darkred solid;
+}
+
+.topic1 .spot1 {
+    background-color: lightgray;
+    width:800px;
+}
+
+.spot1{
+    background-color: black;
+    width:800px;
+}
+
+.topic1 .topicImg {
+    width:200px;
+    background-color: black;
+}
+
+.topicImg {
+    width:200px;
+    background-color: lightgray;
+}
+
+.topicTitle {
+    background-color: lightgray;
+    color:black;
+    padding-left:10px;
+    font-weight:bold;
+}
+
+.topicTitle2 {
+    background-color: black;
+    color:black;
+    padding-left:10px;
+    font-weight:bold;
+}
+
+.topicTitle3 {
+    background-color: lightgrey;
+    color:black;
+    padding-left:10px;
+    font-weight:bold;
+}
+
+.topicName {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.topic2 .spot2 {
+    background-color: darkred;
+    width:800px;
+}
+
+.topicTitle2 {
+    background-color: darkred;
+    color:black;
+    padding-left:10px;
+    font-weight:bold;
 }
 
 #main-header {
     text-align: center;
     padding-top: 10px;
-    color: blueviolet
+    color: black;
 }
 
 /* Larger Resolutions */
@@ -72,7 +185,7 @@ body {
     }
 
     .one {
-        flex:2=4;
+        flex:4;
     }
 
     .two {
@@ -88,7 +201,7 @@ body {
     }
 
     #main-nav ul {
-        background: blueviolet;
+        background: lightslategray;
         display: flex;
     }
 
