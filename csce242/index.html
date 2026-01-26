@@ -5,14 +5,65 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1 id="myStyle">CSCE 242</h1>
-        <strong id="myStyle">Tim Simpson</strong>
-        <div id="myStyle"><p>Utilizing HTML and CSS to design the front end of web pages.</p></div>
-        <a id="myStyle" href="https://github.com/timsimpson26/timsimpson26.github.io/tree/main/csce242">GitHub Repository</a>
-        <h2 id="myStyle">Assignments</h2>
-        <ul>
-            <li><a id="myStyle" href="assignments/01-basic-html/index.html">Assignment 1: Basic HTML</a></li>
-            <li><a id="myStyle" href="assignments/02-basic-css/index.html">Assignment 2: Basic CSS</a></li>
-        </ul>
+        <div id = "main-content">
+            <header id="main-header">
+                <h1>CSCE 242</h1>
+                <nav id = "main-nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Pictures</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main id = "content">
+                <h2>Assignment</h2>
+                <div id ="gallery" class="columns">
+                    <section class ="one">
+                        <h3>Assignment 1</h3>
+                        <a href ="assignments/01-basic-html/index.html">
+                            <img src="images/assignment1.jpg" alt="Assignment 1 Screenshot" style = width:300px;height:150px;>
+                        </a>
+                        <p>This assignment was about creating a basic website to insure understanding
+                            website construction using HTML.
+                        </p>
+                    </section>
+                    <section class ="one">
+                        <h3>Assignment 2</h3>
+                        <a href ="assignments/02-basic-css/index.html">
+                            <img src="images/assignment2.jpg" alt="Assignment 2 Screenshot" style = width:300px;height:150px;>
+                        </a>
+                        <p>Assignment 2 was all about building a website with CSS styling. Learning to
+                            use padding, borders, and background images to enhance the look of a website.
+                        </p>
+                    </section>
+                    <section class ="one">
+                        <h3>Assignment 3</h3>
+                        <a href ="assignments/01-basic-html/index.html">
+                            <img src="images/assignment1.jpg" alt="Assignment 1 Screenshot" style = width:300px;height:150px;>
+                        </a>
+                        <p>I am text</p>
+                    </section>
+                </div>
+                <main id = "content">
+                <h2>Projects</h2>
+                <div id ="gallery" class="columns">
+                    <section class ="one">
+                        <h3>Topic Proposal</h3>
+                        <a href ="project/part1/Travelers Guide to Switzerland_ CSCE242.pdf">
+                            <img src="project/part1/Travelers Guide to Switzerland_ CSCE242 copy.pdf" alt="Project 1 Screenshot" style = width:300px;height:150px;>
+                        </a>
+                        <p>Topic Proposal for my project in CSCE 242.</p>
+                    </section>
+                
+
+            </main>
+            <footer id ="main-footer">
+
+            </footer>
+        </div>
     </body>
 </html>
+                        
+        

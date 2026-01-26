@@ -1,13 +1,105 @@
-a {
-    text-decoration: none;
-}
-    #myStyle {
-        font-family: verdana;
-        color: navy;
-        }
+/* Main Structure */
 body {
-    background-color: rgb(102, 138, 169);
-    border: 10px navy solid;
-    padding : 30px;
+    font-family: verdana;
+        color: navy;
+        background-color: rgb(102, 138, 169);
+        }
 
+#main-content {
+    border: 10px navy solid;
+    padding: 5px 10px;
+    margin:auto;
+    width: 80%;
+}
+
+#main-header {
+    
+}
+
+#content {
+    
+}
+
+#main-footer {
+    
+}
+
+ /* Gallery */
+
+#gallery section{
+    background: lightgray;
+    padding:5px;
+    border-radius:5px;
+    margin:5px;
+}
+
+#gallery section h3 {
+    text-align: center;
+}
+
+/* Navigation */  
+
+#main-nav ul {
+    padding-left:0;     
+}   
+
+#main-nav li {
+    list-style-type: none; 
+    background: lightblue;
+    padding:5px;
+    border-bottom:1px solid navy;
+    text-align: center;
+}
+
+#main-nav a {
+    text-decoration: none; 
+}
+
+/* Typography */
+
+#main-header h1 {
+    text-align: center;
+    padding-top:10px;
+    color: solid navy;
+}
+
+/* Larger Devices */
+
+@media (min-width: 768px) {
+    .columns {
+        display: flex;
+    }
+
+    .one {
+        flex: 1;
+    }
+
+    .two {
+        flex: 2;
+    }
+
+    .three {
+        flex: 3;
+    }
+
+    .four {
+        flex: 4;
+    }
+
+    #main-nav-ul {
+        display: flex;
+    }
+
+    #main-nav li {
+        background:transparent;
+    }
+
+    #main-nav a {
+        color:solid navy;
+        border-bottom:1px solid transparent
+    }
+
+    #main-nav a:hover {
+        border-bottom:1px solid navy;
+    }
 }
