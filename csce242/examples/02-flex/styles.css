@@ -4,21 +4,29 @@ body {
     background:#bde0fe;
 }
 #main-content {
-    background:#cdb4db;
     width:80%;
     margin:auto;
-    padding: 5px 10px;
 }
 #main-header {
-
+    background:#ffafcc;
 }
 
 #content {
 
 }
 
+#sidebar {
+    background:lightcoral;
+}
+
 #main-footer {
 
+}
+
+/*Header*/
+#logo {
+    margin:10px;
+    
 }
 
 /* Gallery */
@@ -31,6 +39,58 @@ body {
 
 #gallery section h3 {
     text-align: center;
+}
+
+/* List */
+.item {
+    margin:5px;
+    background:#cdb4db;
+}
+
+.item img {
+    display:block;
+    margin:auto;
+}
+
+/* Square */
+#square {
+    width:100px;
+    height:100px;
+    background:lightsalmon;
+
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+
+.arrow {
+    font-size:1.5em;
+    color:white;
+    position:absolute;
+    top:32%;
+}
+
+#prev {
+    left:5%;
+}
+
+#next {
+    right:5%;
+}
+
+#slide-desc {
+    position:absolute;
+    bottom:10%;
+    left:5%;
+    background:rgba(255,255,255, 0.8);
+    padding:5px;
+    max-width:40%;
+}
+
+/* Area */
+.area {
+    position:relative;
+    background:#cdb4db;
 }
 /* Navigation */
 
@@ -60,6 +120,10 @@ body {
 @media (min-width: 768px) {
     .columns {
         display: flex;
+    }
+    #content {
+        justify-content:space-between;
+        gap:1em;
     }
 
     .one {

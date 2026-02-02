@@ -3,6 +3,9 @@ body {
     font-family: verdana;
         color: navy;
         background-color: rgb(102, 138, 169);
+        margin:auto;
+        border:1px solid navy;
+        width: 90%;
         }
 
 #main-content {
@@ -13,29 +16,26 @@ body {
 }
 
 #main-header {
-    
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgb(102, 138, 169);
+    padding:10px;
 }
 
 #content {
-    
+    text-align:center;
+    padding:10px;
+    background: lightgray;
 }
 
 #main-footer {
-    
+    text-align:center;
+    padding:10px;
+    background:rgb(102, 138, 169);
 }
 
- /* Gallery */
-
-#gallery section{
-    background: lightgray;
-    padding:5px;
-    border-radius:5px;
-    margin:5px;
-}
-
-#gallery section h3 {
-    text-align: center;
-}
 
 /* Navigation */  
 
@@ -63,43 +63,115 @@ body {
     color: solid navy;
 }
 
+/* Github */
+
+#github {
+    display:flex;
+    text-align:center;
+}
+
+#gitlink {
+    text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:navy;
+    border-radius:3px;
+    text-align:center;
+}
+
+#gitlink a:hover {
+    color:navy;
+}
+
+/* Assigments */
+
+.assignment {
+    border-radisu:10px;
+    background:rgb(102, 138, 169);
+}
+
+.assignment img {
+    display:block;
+    border: 7px solid navy;
+    border-radius:5px;
+    height:100%;
+    max-width:100%;
+    margin:20px auto;
+}
+
+#myAssignments ul {
+    display:flex;
+    flex-direction:column;
+    margin:0px;
+    gap:10px;
+    list-style:none;
+}
+
+#myAssignments h2 {
+    text-align:center;
+    color:navy;
+}
+
+/* Projects */
+
+#myProjects ul {
+    display:flex;
+    flex-direction:column;
+    margin:0;
+    list-style:none;
+    gap:10px;
+}
+
+#myProjects h2 {
+    text-align:center;
+    color:navy;
+}
+
+.project {
+    border-radius: 7px;
+    padding:20px;
+    background:rgb(102, 138, 169);
+}
+
+.project a {
+    margin:auto;
+    border-radius:5px;
+    text-decoration:none;
+    color:navy;
+    background:lightgray;
+    padding:5px;
+}
+
+.project a:hover {
+    color: hover;
+}
+
+.project li {
+    margin:0;
+    list-style:none;
+}
+
+.project img {
+    display:block;
+    height:200px;
+    max-width:140px;
+    margin:20px auto;
+    border:3px solid navy;
+    border-radius:3px;
+}
+
+
 /* Larger Devices */
 
-@media (min-width: 768px) {
-    .columns {
-        display: flex;
+@media (min-width: 900px) {
+    #myAssignments ul, #myProjects ul {
+        flex-wrap:wrap;
+        flex-direction:row;
+    }   
+    .assignment, .project {
+        flex:1;
     }
-
-    .one {
-        flex: 1;
-    }
-
-    .two {
-        flex: 2;
-    }
-
-    .three {
-        flex: 3;
-    }
-
-    .four {
-        flex: 4;
-    }
-
-    #main-nav-ul {
-        display: flex;
-    }
-
-    #main-nav li {
-        background:transparent;
-    }
-
-    #main-nav a {
-        color:solid navy;
-        border-bottom:1px solid transparent
-    }
-
-    #main-nav a:hover {
-        border-bottom:1px solid navy;
+    #main-header {
+        flex-wrap:wrap;
+        flex-direction:column;
     }
 }
