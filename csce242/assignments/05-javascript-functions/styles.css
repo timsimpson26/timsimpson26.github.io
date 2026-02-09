@@ -1,0 +1,95 @@
+body{
+    background: #59817F;
+    margin: auto;
+}
+
+#main-content{
+    background: lightgray;
+    border: 3px solid green;
+}
+#main-header{
+    background: #59817F;
+     border: 1px solid green;
+}
+
+#main-footer{
+    background: lightgray;
+    border: 3px solid green;
+    text-align: center;
+    padding: 8px;
+}
+
+#sub-header{
+    text-align: center;
+}
+.border-frame{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: lightgray;
+    border: 3px solid green;
+}
+.frame{
+    background: lightgray;
+    border: 3px solid green;
+}
+
+#number{
+    text-align: center;
+}
+
+#geometry-border{
+    position: relative;
+}
+
+#geometry-border .triangle{
+    border-left: 74px solid transparent;
+    border-right: 74px solid transparent;
+    border-bottom: 136px solid #59817F;
+    position: relative;
+    right:0%;
+    left: 30%;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+#geometry-border.selected .triangle{
+    display: block;
+}
+
+.image{
+    display: inline-block;
+    padding: 10px;
+}
+#img-frame{
+    cursor: pointer;
+    width: 140px;
+    height: auto;
+    display: block;
+}
+
+.image.framed{
+    border-top: 8px solid red;
+    border-right: 8px solid green;
+    border-bottom: 8px solid blue;
+    border-left: 8px solid purple;
+}
+
+.image{
+    border: none;
+}
+
+@media (min-width: 900px){
+    .border-frame{
+        flex-direction: row;
+        gap: 60px;
+        padding: 20px;
+        text-align: center;
+    }
+    .frame{
+        flex: 1;
+    }
+}

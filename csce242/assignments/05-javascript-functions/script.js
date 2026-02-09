@@ -2,7 +2,7 @@
 
 // Adds triangle to the frame when frame is selected by user
 
-const geometryFrame = document.getElementById("geometry-frame");
+const geometryFrame = document.getElementById("geometry-border");
 
 geometryFrame.addEventListener("click", () =>{
     geometryFrame.classList.toggle("selected");
@@ -24,9 +24,9 @@ datePicker.addEventListener("change", () =>{
     dateOutput.textContent = `You picked the date : ${formatted}`;
 });
 
-// Allows the image to change and have an outline
+// Allows the image to change when the user clicks on it and adds a border to the image when the user clicks on it again.
 
-const frameImg = document.getElementById("frameImage");
+const frameImg = document.getElementById("img-frame");
 const imgHolder = frameImg.parentElement;
 
 frameImg.addEventListener("click", () => {
