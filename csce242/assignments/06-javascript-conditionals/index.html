@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>JavaScript Conditionals</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+
+        <header id="main-header">
+
+            <h1>Assignment 6</h1>
+            <h2>If Statements</h2>
+
+        </header>
+        
+        <nav id="main-nav">
+            <div id="nav-toggle">
+                <div></div>
+            </div>
+            <ul id="main-items" class="hide">
+                <li id="exerciselink1">Exercise 1</li>
+                <li id="exerciselink2">Exercise 2</li>
+            </ul>
+        </nav>
+
+        <section class="main-content">
+
+            <section class="exercise hide" id="ex1">
+
+                <h2>Exercise 1: How many minutes until class?</h2>
+                <label for="minutesSlider">Minutes until class: <span id="minutesValue">30</span></label>
+                <input type="range" id="minutesSlider" min="0" max="60" value="30">
+                <p id="sliderMessage"></p>
+
+            </section>
+
+            <section class="exercise hide" id="ex2">
+                <h2>Exercise 2: Countdown until class</h2>
+                <button id="checkTimeBtn">Check the Time</button>
+                <p id="countdownMessage"></p>
+            </section>
+
+        </section>
+
+    </body>
+
+</html>

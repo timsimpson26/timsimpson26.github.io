@@ -1,0 +1,220 @@
+/* background */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #0b6623;
+    font-family: 'Nunito', Arial, sans-serif;
+}
+
+/* center */
+
+#page-wrap {
+    width: 94%;
+    max-width: 1100px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* hero */
+
+#hero {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* contact */
+
+.contact-bubble {
+    position: absolute;
+    right: 24px;
+    top: 20px;
+    width: 130px;
+}
+
+/* hero text */
+
+.hero-copy {
+    position: absolute;
+    top: 16%;
+    left: 6%;
+    color: white;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.45);
+    max-width: 75%;
+}
+
+.hero-copy h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 48px;
+    margin-bottom: 6px;
+}
+
+.hero-copy h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.cta {
+    background: #1f7a3a;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+}
+
+/* main contenet */
+
+#main {
+    padding: 22px 28px 40px 28px;
+}
+
+/* why section */
+
+.why-inner {
+    background: #e9e9e9;
+    border-radius: 18px;
+    padding: 18px;
+}
+
+.why-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+}
+
+.why-content {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.why-left img {
+    width: 360px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 6px solid white;
+}
+
+.why-right ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.why-right li {
+    font-family: 'Pacifico', cursive;
+    color: #1f7a3a;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* destinations */
+
+.dest-title {
+    font-size: 24px;
+    margin: 26px 0 16px 0;
+}
+
+.cards {
+    display: flex;
+    gap: 18px;
+}
+
+.card {
+    background: #f6f6f6;
+    border-radius: 10px;
+    padding: 14px;
+    width: 32%;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-family: 'Pacifico', cursive;
+    margin-top: 12px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.learn {
+    background: #e6efe6;
+    color: #1f7a3a;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-family: 'Pacifico', cursive;
+}
+
+
+
+/* responsive */
+
+@media (max-width: 900px) {
+
+    #hero {
+        height: 360px;
+    }
+
+    .hero-copy h1 {
+        font-size: 38px;
+    }
+
+    .hero-copy h2 {
+        font-size: 16px;
+    }
+
+    .why-content {
+        flex-direction: column;
+    }
+
+    .why-left img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #hero {
+        height: 300px;
+    }
+
+    .hero-copy h1 {
+        font-size: 28px;
+    }
+
+    .hero-copy h2 {
+        font-size: 14px;
+    }
+
+    .cta {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}

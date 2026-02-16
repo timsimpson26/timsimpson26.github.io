@@ -1,0 +1,106 @@
+/* Tim Simpson */
+
+body{
+    background: lightgray;
+    margin: auto;
+}
+
+#main-header h1{
+    color: black;
+    text-align: center;
+}
+
+#main-header h2{
+    color: darkmagenta;
+    text-align: center;
+}
+
+#main-items{
+    color: darkmagenta;
+    list-style-type: none;
+    text-align: center;
+}
+
+#main-items li{
+    background: thistle;
+    padding: 8px;
+}
+
+.main-content{
+    color: darkmagenta;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#nav-toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#nav-toggle div{
+    border-top: 12px solid black;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    width: 0;
+    height: 0;
+    transition: transform 0.25s ease;
+
+}
+
+#nav-toggle.closed div{
+    transform: rotate(180deg);
+}
+
+#top-links{
+    text-align: center;
+    margin: 8px 0 15px;
+}
+
+#top-links a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#top-links a:not(:last-child)::after{
+    color: black;
+    content: " | ";
+    margin: 0 6px;
+}
+
+#top-links a:hover{
+    text-decoration: underline;
+}
+
+input[type="range"]{
+    width: 70%;
+    margin-top: 10px;
+}
+
+.hide{
+    display: none;
+}
+
+.exercise{
+    background: thistle;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+button{
+    background: darkmagenta;
+    color: white;
+    padding: 10px 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+}
+
+button:hover{
+    opacity: 0.9;
+}
