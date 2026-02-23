@@ -479,10 +479,7 @@ body {
 }
 
 
-
-/* ===============================
-   DESTINATION PAGE STYLING
-   =============================== */
+/* destination */
 
 .destination-page {
     background: #f7f7f7;
@@ -513,7 +510,7 @@ body {
     text-decoration: none;
 }
 
-/* Intro text */
+/* Introduction */
 .intro {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
@@ -532,7 +529,7 @@ body {
     border-radius: 8px;
 }
 
-/* Content Boxes */
+/* Content Box */
 .overview-box,
 .info-box {
     background: #e1e1e1;
