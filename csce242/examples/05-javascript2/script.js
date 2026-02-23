@@ -107,3 +107,4 @@ document.getElementById("btn-display-donation").onclick = () => {
 
     document.querySelector(":root").style.setProperty("--donation", `${percentGoal}%`);
 }
+

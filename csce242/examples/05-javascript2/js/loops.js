@@ -31,3 +31,45 @@ document.getElementById("btn-count-range").onclick = () => {
     }
 
 };
+
+document.getElementById("a-show-toys").onclick = (e) => {
+    e.preventDefault();
+    const toyList = document.getElementById("toy-list");
+    toyList.innerHTML = ""; 
+
+    const toys = ["fish", "guitar", "rc car", "lego"];
+
+    /* traditional for loop
+    for(let i = 0; i < toys.length; i++){
+        const li = document.createElement("li");
+        li.innerHTML = toys[i];
+        toyList.append(li);
+    }
+    */
+
+    // second way preffered
+    toys.forEach((toy) => {
+       const li = document.createElement("li");
+        li.innerHTML = toy;
+        toyList.append(li) 
+    });
+};
+
+// associative array
+const toyPrices = [];
+toyPrices["fish"] = 2.99;
+toyPrices["guitar"] = 200;
+toyPrices["rc car"] = 50;
+toyPrices["lego"] = 30;
+
+for(let toy in toyPrices){
+    const toyTable = document.getElementById("toy-table");
+    const tr = document.createElement("tr");
+    const tdToy = document.createElement("td");
+    tdToy.innerHTML = toy;
+    const tdPrice = document.createElement("td");
+    tdPrice.innerHTML = toyPrices[toy];
+    tr.append(tdToy);
+    tr.append(tdPrice);
+    toyTable.append(tr);
+}
