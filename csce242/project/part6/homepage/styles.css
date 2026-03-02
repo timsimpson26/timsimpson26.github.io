@@ -1,0 +1,696 @@
+/* =========================
+   FULL styles.css
+   (Includes header/nav, homepage, destinations,
+    starting-journey, contact, about, reviews, responsive)
+   ========================= */
+
+/* -------------------------
+   BASE / LAYOUT
+   ------------------------- */
+:root{
+  --brand-green: #1f7a3a;
+  --muted: #e9e9e9;
+  --panel: #f6f6f6;
+  --accent: #e6efe6;
+  --dark: #222;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+#page-wrap {
+    width: 94%;
+    max-width: 1100px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* -------------------------
+   HEADER + ARROW NAV
+   ------------------------- */
+
+.site-header {
+  background: white;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  z-index: 200;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: var(--brand-green);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#nav-toggle { display: none; }
+
+.nav-arrow {
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+  color: var(--dark);
+  user-select: none;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.nav-arrow:hover { background: rgba(31,122,58,0.04); }
+
+#nav-toggle:checked + .nav-arrow { transform: rotate(180deg); }
+
+/* Dropdown nav container */
+.primary-nav {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  width: 220px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.28s cubic-bezier(.2,.9,.2,1);
+}
+
+/* show when checked */
+#nav-toggle:checked + .nav-arrow + .primary-nav { max-height: 500px; }
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li { border-bottom: 1px solid #f0f0f0; }
+
+.nav-list a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: var(--brand-green);
+  font-weight: 600;
+}
+
+.nav-list a:hover { background: #f5f5f5; }
+
+/* -------------------------
+   HERO (Homepage)
+   ------------------------- */
+
+#hero {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-copy {
+    position: absolute;
+    top: 16%;
+    left: 6%;
+    color: white;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.45);
+    max-width: 75%;
+}
+
+.hero-copy h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    margin: 0 0 6px 0;
+}
+
+.hero-copy h2 {
+    font-size: 20px;
+    margin: 0 0 18px 0;
+    font-weight: 400;
+}
+
+/* CTA base */
+.cta {
+    background: var(--brand-green);
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* -------------------------
+   MAIN CONTENT
+   ------------------------- */
+
+#main {
+    padding: 22px 28px 40px 28px;
+}
+
+/* WHY SECTION */
+
+.why-inner {
+    background: var(--muted);
+    border-radius: 18px;
+    padding: 18px;
+}
+
+.why-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.why-content {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.why-left img {
+    width: 360px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 6px solid white;
+}
+
+.why-right ul {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.why-right li {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--brand-green);
+    margin-bottom: 20px;
+}
+
+/* -------------------------
+   DESTINATIONS (Homepage Cards)
+   ------------------------- */
+
+.dest-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin: 30px 0 20px 0;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.card {
+    background: #f6f6f6;
+    border-radius: 10px;
+    padding: 16px;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    margin-top: 14px;
+    font-size: 22px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin: 10px 0 14px 0;
+}
+
+.learn {
+    background: var(--accent);
+    color: var(--brand-green);
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* -------------------------
+   DESTINATION PAGES (single destination)
+   ------------------------- */
+
+.destination-page {
+    background: #f7f7f7;
+    margin: 0;
+}
+
+.page-header {
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    margin: 0;
+    color: var(--brand-green);
+}
+
+.home-bubble {
+    background: var(--muted);
+    padding: 8px 14px;
+    border-radius: 12px;
+    color: var(--brand-green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.intro {
+    font-size: 20px;
+    max-width: 900px;
+    margin: 10px 40px 30px 40px;
+    line-height: 1.6;
+    color: #222;
+}
+
+.hero {
+    display: block;
+    margin: 0 auto 40px auto;
+    width: 75%;
+    max-width: 900px;
+    border-radius: 8px;
+}
+
+.overview-box,
+.info-box {
+    background: #e1e1e1;
+    border-radius: 16px;
+    padding: 24px;
+    margin: 0 auto 28px auto;
+    width: 85%;
+    max-width: 1000px;
+}
+
+.overview-box h2,
+.info-box h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--brand-green);
+    font-size: 28px;
+    margin: 0 0 12px 0;
+}
+
+.overview-box p,
+.info-box p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* two-column layout for details */
+.two-column {
+    display: flex;
+    gap: 24px;
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+}
+
+.two-column .info-box { flex: 1; }
+
+/* -------------------------
+   STARTING JOURNEY PAGE
+   (restored & tuned)
+   ------------------------- */
+
+.starting-page {
+  margin: 0;
+  background: #ffffff;
+}
+
+/* header for starting journey */
+.starting-header {
+  background: var(--brand-green);
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.starting-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: white;
+  margin: 0;
+}
+
+/* hero with background image (cover) */
+.starting-hero {
+  position: relative;
+  height: 650px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+/* overlay for legibility */
+.starting-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+}
+
+/* left text card on hero */
+.starting-text-card {
+  position: absolute;
+  left: 60px;
+  top: 80px;
+  max-width: 520px;
+  z-index: 2;
+  background: rgba(233,233,233,0.95);
+  padding: 28px;
+  border-radius: 16px;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #222;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* itinerary card right side */
+.starting-itinerary {
+  position: absolute;
+  right: 60px;
+  bottom: 60px;
+  width: 360px;
+  z-index: 2;
+}
+
+.starting-itinerary img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+}
+
+/* ensure hero content stacks on small screens */
+@media (max-width: 900px) {
+  .starting-title { font-size: 40px; }
+  .starting-hero { height: 500px; }
+  .starting-text-card {
+    left: 30px;
+    top: 40px;
+    font-size: 18px;
+  }
+  .starting-itinerary {
+    width: 280px;
+    right: 30px;
+    bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .starting-hero {
+    height: auto;
+    padding-bottom: 60px;
+  }
+
+  .starting-text-card,
+  .starting-itinerary {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    margin: 20px auto;
+  }
+
+  .starting-text-card { width: 85%; }
+  .starting-itinerary { width: 85%; }
+}
+
+/* -------------------------
+   CONTACT PAGE
+   (restored & tuned)
+   ------------------------- */
+
+.contact-page {
+  background: #dff5e6;
+  margin: 0;
+}
+
+.contact-header {
+  padding: 28px 30px;
+  background: transparent;
+}
+
+.contact-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: var(--brand-green);
+  margin: 0;
+  text-align: left;
+}
+
+.contact-banner {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  margin: 18px 0;
+  border-radius: 8px;
+}
+
+/* main contact area */
+.contact-main {
+  max-width: 1000px;
+  margin: 28px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 28px;
+  align-items: start;
+}
+
+.contact-heading {
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+  font-size: 40px;
+  margin: 6px 0 18px 0;
+  color: var(--brand-green);
+}
+
+.contact-blurb {
+  font-size: 18px;
+  color: var(--brand-green);
+  margin-bottom: 18px;
+}
+
+/* left column list / form area */
+.contact-info-wrapper {
+  padding-bottom: 36px;
+  min-height: 140px;
+}
+
+.contact-list {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #0b6623;
+  padding-left: 18px;
+  margin: 0;
+}
+
+/* right column flag / contact card */
+.contact-flag {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background: white;
+  padding: 14px;
+}
+
+/* small helpers */
+.contact-card-row { display:flex; gap:12px; align-items:center; }
+.contact-card-row img { width:64px; height:64px; object-fit:cover; border-radius:6px }
+
+/* Responsive adjustments for contact */
+@media (max-width: 900px) {
+  .contact-main { grid-template-columns: 1fr; padding: 10px; }
+  .contact-flag { max-width: 100%; margin: 0 auto; }
+  .contact-title { font-size: 40px; text-align: center; }
+  .contact-heading { text-align: center; font-size: 36px; }
+}
+
+/* -------------------------
+   ABOUT + REVIEWS
+   ------------------------- */
+
+.sub-hero {
+  background: linear-gradient(180deg, rgba(31,122,58,0.95), rgba(31,122,58,0.85));
+  color: white;
+  padding: 34px 28px;
+  text-align: center;
+}
+
+.sub-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin: 0 0 6px 0;
+}
+
+.sub-lede {
+  font-size: 16px;
+  margin-bottom: 12px;
+  opacity: 0.95;
+}
+
+.mini-nav { display:flex; gap:12px; justify-content:center; margin-top:10px; }
+
+.home-bubble {
+  background: white;
+  color: var(--brand-green);
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* About layout */
+.about-main { padding: 32px 28px 60px; }
+.about-container {
+  display:flex;
+  gap:28px;
+  max-width:1000px;
+  margin:0 auto;
+}
+.about-text { flex:1; }
+.about-text h2 { font-family: 'Playfair Display', serif; color: var(--brand-green); font-size: 26px; margin-top:6px; }
+.about-image img { width:360px; border-radius:10px; object-fit:cover; border:6px solid white; box-shadow: 0 14px 36px rgba(0,0,0,0.08); }
+
+/* Values */
+.team-box { background: var(--panel); border-radius:12px; padding:22px; max-width:1000px; margin:20px auto 40px; }
+.values-list { display:flex; gap:18px; justify-content:space-between; flex-wrap:wrap; }
+.value { flex:1; min-width:180px; }
+.value h3 { font-family: 'Playfair Display', serif; color: var(--brand-green); margin-bottom:6px; }
+
+/* Reviews layout */
+.reviews-main { padding: 28px 28px 60px; }
+.review-form-card { background: var(--panel); border-radius:12px; padding:18px; margin-bottom:20px; }
+.review-form label { display:block; margin-bottom:12px; font-size:14px; }
+.review-form input[type="text"], .review-form textarea, .review-form select {
+  width:100%; padding:10px 12px; border-radius:8px; border:1px solid #ddd; font-size:14px; margin-top:6px; box-sizing:border-box;
+}
+.cta.small { padding:8px 14px; border-radius:8px; font-size:14px; }
+.cta.small.alt { background: var(--muted); color: var(--brand-green); margin-left:8px; }
+.reviews-list { display:grid; gap:16px; margin-top:8px; }
+.review-card { background:white; border-radius:12px; padding:14px; box-shadow:0 8px 20px rgba(0,0,0,0.04); }
+.review-card header { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+
+/* -------------------------
+   FOOTER
+   ------------------------- */
+
+.site-footer {
+  padding: 30px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #666;
+}
+
+/* -------------------------
+   RESPONSIVE (global)
+   ------------------------- */
+
+@media (max-width: 900px) {
+
+    .why-content,
+    .cards,
+    .two-column,
+    .about-container,
+    .values-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card { width: 100%; }
+
+    .hero-copy h1 { font-size: 40px; }
+
+    .page-title { font-size: 40px; }
+
+    /* Primary nav becomes full-width dropdown on small screens */
+    .primary-nav {
+      position: fixed;
+      top: 56px;
+      right: 12px;
+      left: 12px;
+      width: auto;
+      border-radius: 12px;
+    }
+
+    #nav-toggle:checked + .nav-arrow + .primary-nav {
+      max-height: 1000px;
+    }
+
+    .nav-list a { text-align: center; }
+}
+
+@media (max-width: 520px) {
+
+    .hero-copy h1 { font-size: 30px; }
+    .hero-copy h2 { font-size: 14px; }
+    .page-title { font-size: 30px; }
+    .about-image img { width: 100%; max-width: 720px; }
+    .contact-title { font-size: 30px; text-align:center; }
+    .contact-heading { font-size: 28px; text-align:center; }
+    .contact-main { padding: 12px; grid-template-columns: 1fr; }
+}
