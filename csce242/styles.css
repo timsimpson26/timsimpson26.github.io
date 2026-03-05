@@ -79,73 +79,101 @@ body {
 
 /* ---------- Assignments ---------- */
 
-.assignment {
-    border-radius: 10px;
-    background: rgb(102, 138, 169);
-    padding: 0.6rem;
-    box-sizing: border-box;
-}
-
-.assignment img {
-    display: block;
-    border: 7px solid navy;
-    border-radius: 5px;
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-}
-
 #myAssignments ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-#myAssignments h2 {
+.assignment {
+    border-radius: 10px;
+    background: rgb(102, 138, 169);
+    padding: 15px;
+    box-sizing: border-box;
     text-align: center;
-    color: navy;
-}
-
-/* ---------- Projects ---------- */
-
-#myProjects ul {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    list-style: none;
-    gap: 10px;
+    justify-content: space-between;
 }
 
-.project {
-    border-radius: 7px;
-    padding: 20px;
-    background: rgb(102, 138, 169);
+.assignment img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin: 15px 0;
+    border: 4px solid navy;
+    border-radius: 6px;
 }
 
-.project a {
-    margin: auto;
-    border-radius: 5px;
+.assignment a {
     text-decoration: none;
     color: navy;
     background: lightgray;
-    padding: 5px;
+    padding: 6px 8px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px 0;
 }
 
-.project li {
+/*---- Projects ----*/
+
+#myProjects ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
     margin: 0;
     list-style: none;
+}
+
+.project {
+    background: rgb(102, 138, 169);
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project a {
+    text-decoration: none;
+    color: navy;
+    background: lightgray;
+    padding: 6px 8px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px 0;
 }
 
 .project img {
     display: block;
-    height: 200px;
-    max-width: 140px;
-    margin: 20px auto;
-    border: 3px solid navy;
-    border-radius: 3px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin: 15px 0;
+    border: 4px solid navy;
+    border-radius: 6px;
+}
+
+.final-project h3 {
+    margin-bottom: 10px;
+}
+
+.final-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.final-links a {
+    text-align: center;
 }
 
 /* ---------- Responsive ---------- */
