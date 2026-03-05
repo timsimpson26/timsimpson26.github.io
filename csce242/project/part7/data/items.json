@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Matterhorn Poster",
+      "img": "../homepage/images/sw1.jpg",
+      "category": "Poster",
+      "price": 19.99,
+      "description": "A stunning high-resolution poster of the iconic Matterhorn."
+    },
+    {
+      "id": 2,
+      "title": "Swiss Chocolate Gift Box",
+      "img": "../homepage/images/sw2.jpg",
+      "category": "Food",
+      "price": 14.50,
+      "description": "Assorted premium Swiss chocolates from local chocolatiers."
+    },
+    {
+      "id": 3,
+      "title": "Lucerne Landscape Print",
+      "img": "../homepage/images/sw3.jpg",
+      "category": "Print",
+      "price": 12.00,
+      "description": "A beautiful print of Lake Lucerne at sunrise."
+    },
+    {
+      "id": 4,
+      "title": "Alpine Hiking Map",
+      "img": "../homepage/images/sw4.jpg",
+      "category": "Map",
+      "price": 8.75,
+      "description": "Detailed hiking map of Switzerland's most scenic alpine routes."
+    },
+    {
+      "id": 5,
+      "title": "Mini Swiss Cuckoo Clock",
+      "img": "../homepage/images/sw5.jpg",
+      "category": "Souvenir",
+      "price": 24.99,
+      "description": "Traditional handcrafted mini cuckoo clock."
+    },
+    {
+      "id": 6,
+      "title": "Swiss Travel Guide",
+      "img": "../homepage/images/sw6.jpg",
+      "category": "Guide",
+      "price": 9.99,
+      "description": "Complete travel guide for exploring Switzerland."
+    },
+    {
+      "id": 7,
+      "title": "Interlaken Adventure Booklet",
+      "img": "../homepage/images/sw7.jpg",
+      "category": "Booklet",
+      "price": 5.99,
+      "description": "Discover adventure activities in Interlaken."
+    },
+    {
+      "id": 8,
+      "title": "Swiss Flag Souvenir",
+      "img": "../homepage/images/sw8.jpg",
+      "category": "Souvenir",
+      "price": 6.50,
+      "description": "Classic Swiss flag keepsake souvenir."
+    }
+  ]
+}

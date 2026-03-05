@@ -1,0 +1,165 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Explore Switzerland</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="page-wrap">
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">Explore Switzerland</a>
+            <input type="checkbox" id="nav-toggle" aria-hidden="true">
+            <label for="nav-toggle" class="nav-arrow" aria-hidden="true">▾</label>
+            <nav class="primary-nav" aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li><a href="../contact/contact.html">Contact Us</a></li>
+                    <li><a href="../starting-journey/starting-journey.html">Start The Journey</a></li>
+                    <li><a href="../about/about.html">About Us</a></li>
+                    <li><a href="../reviews/reviews.html">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header id="hero" role="banner">
+        <img class="hero-img" src="images/hero.jpg" alt="Swiss Alps">
+        <div class="hero-copy">
+            <h1>Explore Switzerland</h1>
+            <h2>Lakes, Alps, Culture, and an Unforgettable Experience</h2>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <section id="why">
+            <div class="why-inner">
+                <h2 class="why-title">Why Switzerland?</h2>
+                <div class="why-content">
+                    <div class="why-left">
+                        <img src="images/why.jpg" alt="Swiss Mountains">
+                    </div>
+                    <div class="why-right">
+                        <ul>
+                            <li>Stunning Alpine Landscapes</li>
+                            <li>Rich Cultural Heritage</li>
+                            <li>Endless Adventure</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="fact-rotator-wrap">
+            <div class="fact-rotator" id="fact-rotator" aria-live="polite" tabindex="0">
+                <span class="fact-text" id="fact-text">
+                    Switzerland has 4 national languages: German, French, Italian and Romansh.
+                </span>
+            </div>
+        </div>
+
+        <section id="destinations">
+            <h2 class="dest-title">Top Destinations</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/card_1.jpg" alt="Zermatt">
+                    <h3>Zermatt</h3>
+                    <p>
+                        Home to the iconic Matterhorn, Zermatt is a car-free village
+                        perfect for skiing, hiking, and mountaineering.
+                    </p>
+                    <a class="learn" href="../zermatt/zermatt.html">Learn More</a>
+                </div>
+
+                <div class="card">
+                    <img src="images/card_2.jpg" alt="Lucerne">
+                    <h3>Lucerne</h3>
+                    <p>
+                        A charming city known for its medieval Chapel Bridge
+                        and stunning mountain views.
+                    </p>
+                    <a class="learn" href="../lucerne/lucerne.html">Learn More</a>
+                </div>
+
+                <div class="card">
+                    <img src="images/card_3.jpg" alt="Interlaken">
+                    <h3>Interlaken</h3>
+                    <p>
+                        Nestled between two lakes, Interlaken is an adventure capital
+                        and gateway to the Jungfraujoch region.
+                    </p>
+                    <a class="learn" href="../interlaken/interlaken.html">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="swiss-items">
+            <h2 class="dest-title">Swiss Items</h2>
+            <div id="json-output" class="cards-grid" aria-live="polite">
+                Loading items…
+            </div>
+        </section>
+
+        <section id="contact-inline">
+    <h2 class="dest-title">Contact Us</h2>
+    <form id="contact-form" class="contact-form" 
+          action="https://api.web3forms.com/submit" 
+          method="POST">
+        
+        <input type="hidden" name="access_key" value="ca7b7231-4920-4af8-a1a3-c1f2e838275c">
+
+        <label>
+            Name
+            <input type="text" name="name" required placeholder="Your name">
+        </label>
+
+        <label>
+            Email
+            <input type="email" name="email" required placeholder="your@email.com">
+        </label>
+
+        <label>
+            Message
+            <textarea name="message" rows="5" required placeholder="Your message..."></textarea>
+        </label>
+
+        <div id="contact-msg" class="contact-msg" role="status"></div>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+        <section id="map-section">
+            <h2 class="dest-title">Map — Matterhorn / Zermatt</h2>
+            <div class="iframe-wrapper iframe-centered">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=7.7%2C45.94%2C7.95%2C46.02&layer=mapnik&marker=45.98%2C7.82"
+                    allowfullscreen
+                    loading="lazy"
+                    title="Matterhorn location">
+                </iframe>
+            </div>
+            <p class="map-link">
+                <small>
+                    <a href="https://www.openstreetmap.org/?mlat=45.98&mlon=7.82#map=13/45.98/7.82">
+                        View larger map on OpenStreetMap
+                    </a>
+                </small>
+            </p>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="site-footer">
+        <small>© Tim Simpson tms28 </small>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

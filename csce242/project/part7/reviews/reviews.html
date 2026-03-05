@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Reviews | Explore Switzerland</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../homepage/styles.css">
+</head>
+<body>
+<div id="page-wrap">
+
+    <header class="sub-hero">
+        <div class="sub-hero-inner">
+            <h1>Traveler Reviews</h1>
+            <p class="sub-lede">
+                Real experiences from travelers exploring Switzerland.
+            </p>
+            <nav class="mini-nav">
+                <a class="home-bubble" href="../homepage/index.html">Home</a>
+                <a class="home-bubble" href="../about/about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <img src="images/traveler_experiences_banner.jpg"
+         alt="Travel experiences in Switzerland"
+         style="width:100%; display:block; border-radius: 0 0 8px 8px;">
+
+    <main id="main" class="reviews-main">
+        <section class="reviews-section">
+            <div class="reviews-intro">
+                <h2>Share Your Experience</h2>
+                <p>
+                    Tell us about your Swiss adventure — what did you love most?
+                </p>
+            </div>
+
+            <div class="review-form-card">
+                <form class="review-form" action="#" method="post">
+                    <label>
+                        Your Name
+                        <input type="text" name="reviewer" required>
+                    </label>
+                    <label>
+                        Rating
+                        <select name="rating" required>
+                            <option>★★★★★ 5</option>
+                            <option>★★★★ 4</option>
+                            <option>★★★ 3</option>
+                            <option>★★ 2</option>
+                            <option>★ 1</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Your Review
+                        <textarea name="review-text" rows="4" required></textarea>
+                    </label>
+                    <button type="submit" class="cta small">Submit Review</button>
+                </form>
+            </div>
+            <section class="reviews-list">
+                <article class="review-card">
+                    <header>
+                        <strong>Emily R.</strong>
+                        <span class="review-rating">★★★★★</span>
+                    </header>
+                    <p class="review-text">
+                        The views in Interlaken were absolutely breathtaking.
+                        The train rides alone were worth the trip!
+                    </p>
+                    <small class="review-date">March 2026</small>
+                </article>
+            </section>
+
+        </section>
+    </main>
+
+    <footer id="footer" class="site-footer">
+        <div style="margin-bottom:8px;">
+          <a class="home-bubble" href="index.html">← Back to Home</a>
+        </div>
+        <small>© 2026 Explore Switzerland</small>
+    </footer>
+
+</div>
+</body>
+</html>
